@@ -87,12 +87,12 @@
                     </TransformGroup>
                 </Image.RenderTransform>
             </Image>
-            <PasswordBox HorizontalAlignment="Left" Margin="669,334,0,0" VerticalAlignment="Top" Width="120"/>
-            <TextBox HorizontalAlignment="Left" Margin="669,293,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+            <PasswordBox x:Name="TxtPassword" HorizontalAlignment="Left" Margin="669,334,0,0" VerticalAlignment="Top" Width="120"/>
+            <TextBox x:Name="TxtUserName" HorizontalAlignment="Left" Margin="669,293,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
             <Label Content="MARKET-ZONE" HorizontalAlignment="Left" Margin="543,99,0,0" VerticalAlignment="Top" FontSize="48" FontFamily="Javanese Text"/>
             <Label Content="USER NAME" HorizontalAlignment="Left" Margin="537,0,0,0" VerticalAlignment="Center" FontFamily="Arial Black" FontSize="16"/>
             <Label Content="PASSWORD" HorizontalAlignment="Left" Margin="536,327,0,0" VerticalAlignment="Top" FontFamily="Arial Black" FontSize="16"/>
-            <Button Content="LOGIN" HorizontalAlignment="Left" Margin="534,399,0,0" VerticalAlignment="Top" Height="39" Width="307" Background="#FFE76F51"/>
+            <Button x:Name="BtnLogin" Content="LOGIN" HorizontalAlignment="Left" Margin="534,399,0,0" VerticalAlignment="Top" Height="39" Width="307" Background="#FFE76F51" Click="BtnLogin_Click"/>
             <Label Content="No tienes cuenta?" HorizontalAlignment="Left" Margin="532,461,0,0" VerticalAlignment="Top"/>
             <Button Content="Crear cuenta" HorizontalAlignment="Left" Margin="652,461,0,0" VerticalAlignment="Top" Background="#FFE76F51"/>
             <ComboBox HorizontalAlignment="Left" Margin="654,221,0,0" VerticalAlignment="Top" Width="120" Text="Selecciona Rol" Background="#FFE6542F" Cursor=""/>

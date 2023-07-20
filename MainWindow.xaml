@@ -52,7 +52,9 @@
                             Width="25"
                             HorizontalAlignment="Right"
                             VerticalAlignment="Top"
-                            Margin="0,5,30,0" Click="BtnMinimizar_Click">
+                            Margin="0,5,30,0" Click="BtnMinimizar_Click"
+                            
+                            >
                         
                     </Button>
                     <!--#endregion-->

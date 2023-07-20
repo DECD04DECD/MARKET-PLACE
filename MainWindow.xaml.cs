@@ -48,6 +48,7 @@ namespace MARKET_PLACE
                     Usuario usuario = new Usuario();
                     usuario.UserName = TxtUserName.Text;
                     usuario.Password = TxtPassword.Password;
+                    //hola jhvhgcgj
                 }
             }
             catch ( Exception ex)

@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <RootNamespace>MARKET_PLACE</RootNamespace>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="cerrar.png" />
+    <None Remove="login.png" />
+    <None Remove="Vistas\cerrar.png" />
+    <None Remove="Vistas\configuracion.png" />
+    <None Remove="Vistas\info.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Context\" />
+    <Folder Include="Entities\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="cerrar.png" />
+    <Resource Include="login.png" />
+    <Resource Include="Vistas\cerrar.png" />
+    <Resource Include="Vistas\configuracion.png" />
+    <Resource Include="Vistas\info.png" />
+  </ItemGroup>
+
+</Project>

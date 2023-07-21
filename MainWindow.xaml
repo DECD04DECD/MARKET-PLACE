@@ -92,9 +92,9 @@
             <Label Content="MARKET-ZONE" HorizontalAlignment="Left" Margin="543,99,0,0" VerticalAlignment="Top" FontSize="48" FontFamily="Javanese Text"/>
             <Label Content="USER NAME" HorizontalAlignment="Left" Margin="537,0,0,0" VerticalAlignment="Center" FontFamily="Arial Black" FontSize="16"/>
             <Label Content="PASSWORD" HorizontalAlignment="Left" Margin="536,327,0,0" VerticalAlignment="Top" FontFamily="Arial Black" FontSize="16"/>
-            <Button x:Name="BtnLogin" Content="LOGIN" HorizontalAlignment="Left" Margin="534,399,0,0" VerticalAlignment="Top" Height="39" Width="307" Background="#FFE76F51" Click="BtnLogin_Click"/>
+            <Button x:Name="BtnLogin" Content="LOGIN" HorizontalAlignment="Left" Margin="534,399,0,0" VerticalAlignment="Top" Height="39" Width="307" Background="#FFE76F51" BorderBrush="Transparent" Click="BtnLogin_Click"/>
             <Label Content="No tienes cuenta?" HorizontalAlignment="Left" Margin="532,461,0,0" VerticalAlignment="Top"/>
-            <Button Content="Crear cuenta" HorizontalAlignment="Left" Margin="652,461,0,0" VerticalAlignment="Top" Background="#FFE76F51"/>
+            <Button Content="Crear cuenta" HorizontalAlignment="Left" Margin="638,464,0,0" VerticalAlignment="Top" Background="Transparent" BorderBrush="Transparent" Foreground="#FF0041BC"/>
             <ComboBox HorizontalAlignment="Left" Margin="654,221,0,0" VerticalAlignment="Top" Width="120" Text="Selecciona Rol" Background="#FFE6542F" Cursor=""/>
         </Grid>
 

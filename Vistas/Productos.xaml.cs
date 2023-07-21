@@ -26,7 +26,12 @@ namespace MARKET_PLACE.Vistas
 
         private void BtnCerrar_Click(object sender, RoutedEventArgs e)
         {
-            Close();
+            this.Close();
+        }
+
+        private void BtnMinimizar_Click(object sender, RoutedEventArgs e)
+        {
+            this.WindowState = WindowState.Minimized;
         }
     }
 }

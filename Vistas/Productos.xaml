@@ -112,7 +112,7 @@
                             Width="25"
                             HorizontalAlignment="Right"
                             VerticalAlignment="Top"
-                            Margin="0,5,30,0">
+                            Margin="0,5,30,0" Click="BtnMinimizar_Click">
                         <Image Source="/Vistas/mini.png"
                                Cursor="Hand"/>
                     </Button>
@@ -130,7 +130,6 @@
                             Margin="0,5,5,0" Click="BtnCerrar_Click">
                         <Image Source="/Vistas/cerrar.png"
                                Cursor="Hand"/>
-                        
                     </Button>
                     <!--#endregion-->
             </Grid>

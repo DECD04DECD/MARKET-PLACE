@@ -36,12 +36,17 @@ namespace MARKET_PLACE.Vistas
 
         private void TBshow(object sender, RoutedEventArgs e)
         {
-
+           // Content.Opacity = 0.5;
         }
 
         private void TBhide(object sender, RoutedEventArgs e)
         {
+            //Content.Opacity = 1;
+        }
 
+        private void PreviewMouseLefthButtonDownBG(object sender, MouseButtonEventArgs e)
+        {
+            BtnShowHide.IsChecked=false;
         }
     }
 }

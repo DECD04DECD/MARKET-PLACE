@@ -14,6 +14,7 @@
     <None Remove="Vistas\cerrar.png" />
     <None Remove="Vistas\configuracion.png" />
     <None Remove="Vistas\info.png" />
+    <None Remove="Vistas\Menu.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -35,6 +36,9 @@
     <Resource Include="Vistas\cerrar.png" />
     <Resource Include="Vistas\configuracion.png" />
     <Resource Include="Vistas\info.png" />
+    <Resource Include="Vistas\Menu.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
 </Project>

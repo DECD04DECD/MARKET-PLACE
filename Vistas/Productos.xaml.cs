@@ -33,5 +33,15 @@ namespace MARKET_PLACE.Vistas
         {
             this.WindowState = WindowState.Minimized;
         }
+
+        private void TBshow(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void TBhide(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

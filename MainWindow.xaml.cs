@@ -43,7 +43,7 @@ namespace MARKET_PLACE
         private void BtnLogin_Click(object sender, RoutedEventArgs e)
         {
 
-            Productos pr = new Productos();
+            Productos pr = new();
             pr.Show();
 
             /*En prueba

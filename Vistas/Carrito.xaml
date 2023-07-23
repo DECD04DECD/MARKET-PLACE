@@ -5,8 +5,84 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MARKET_PLACE.Vistas"
         mc:Ignorable="d"
-        Title="Carrito" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        Title="Carrito" 
+        Height="600" 
+        Width="1000"
+          WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        Background="Transparent">
+
+
+    <Border CornerRadius="10"
+            Background="GhostWhite">
+        <Grid Name="principal"
+              Background="White" Cursor="Hand">
+
+
+            <Grid Name="Header"
+                  Height="35"
+                  VerticalAlignment="Top"
+                  Background="Transparent">
+                <Border CornerRadius="10,10,0,0"
+                        Background="#e76f51"/>
+                <!--#endregion-->
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="220"/>
+                        <ColumnDefinition Width="100"/>
+                    </Grid.ColumnDefinitions>
+
+                    <!--#region TITLE-->
+                    <TextBlock Text="MARKET-ZONE"
+                               Grid.Column="0"
+                               Foreground="Black"
+                               FontSize="15"
+                               HorizontalAlignment="Left"
+                               VerticalAlignment="Center">
+                    </TextBlock>
+                    <!--#endregion-->
+
+                    <!--#region MINIMIZAR-->
+                    <Button x:Name="BtnMinimizar"
+                            Grid.Column="2"
+                            Background="Transparent"
+                            BorderBrush="Transparent"
+                            Height="25"
+                            Width="25"
+                            HorizontalAlignment="Right"
+                            VerticalAlignment="Top"
+                            Margin="0,5,30,0" Click="BtnMinimizar_Click">
+                        
+
+
+                    </Button>
+                    <!--#endregion-->
+
+                    <!--#region CERRAR-->
+                    <Button x:Name="BtnCerrar"
+                            Grid.Column="2"
+                            Background="Transparent"
+                            BorderBrush="Transparent"
+                            Height="25"
+                            Width="25"
+                            HorizontalAlignment="Right"
+                            VerticalAlignment="Top"
+                            Margin="0,5,5,0" 
+                            Cursor="Hand" Click="BtnCerrar_Click">
+                        <Image Source="/cerrar.png"
+                               Cursor="Hand"/>
+                    </Button>
+                    <!--#endregion-->
+                </Grid>
+            </Grid>
+
+
+        </Grid>
+
+
+    </Border>
+
 </Window>

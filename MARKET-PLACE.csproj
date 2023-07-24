@@ -11,25 +11,46 @@
   <ItemGroup>
     <None Remove="cerrar.png" />
     <None Remove="login.png" />
+    <None Remove="Vistas\Carrito.png" />
     <None Remove="Vistas\cerrar.png" />
     <None Remove="Vistas\configuracion.png" />
+    <None Remove="Vistas\Home.png" />
     <None Remove="Vistas\info.png" />
+
     <None Remove="Vistas\NARANMJA.jpeg" />
+
+    <None Remove="Vistas\Menu.png" />
+    <None Remove="Vistas\mini.png" />
+    <None Remove="Vistas\Vender.png" />
+
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Context\" />
-    <Folder Include="Entities\" />
-    <Folder Include="Services\" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="MySql.EntityFrameworkCore" Version="5.0.0" />
   </ItemGroup>
 
   <ItemGroup>
     <Resource Include="cerrar.png" />
     <Resource Include="login.png" />
+    <Resource Include="Vistas\Carrito.png" />
     <Resource Include="Vistas\cerrar.png" />
     <Resource Include="Vistas\configuracion.png" />
+    <Resource Include="Vistas\Home.png" />
     <Resource Include="Vistas\info.png" />
+
     <Resource Include="Vistas\NARANMJA.jpeg" />
+
+    <Resource Include="Vistas\Menu.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Vistas\mini.png" />
+    <Resource Include="Vistas\Vender.png" />
+
   </ItemGroup>
 
 </Project>

@@ -51,7 +51,7 @@ namespace MARKET_PLACE.Vistas
 
         private void Carrito(object sender, RoutedEventArgs e)
         {
-            
+            DataContext = new Carritoc();
         }
     }
 }

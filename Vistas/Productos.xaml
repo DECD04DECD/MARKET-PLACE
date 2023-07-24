@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MARKET_PLACE.Vistas"
-        
+        xmlns:viewmodels="clr-namespace:MARKET_PLACE.Vistas"
         mc:Ignorable="d"
         Title="Productos"
         Height="600"
@@ -39,8 +39,8 @@
         <SolidColorBrush x:Key="Button.Disabled.Border" Color="#FFADB2B5"/>
         <SolidColorBrush x:Key="Button.Disabled.Foreground" Color="#FF838383"/>
         <!--#endregion-->
-        
-    <!--#region BTN SHOW/HIDE-->
+
+        <!--#region BTN SHOW/HIDE-->
         <Style x:Key="BtnShowHide" TargetType="{x:Type ToggleButton}">
             <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
             <Setter Property="Background" Value="Transparent"/>
@@ -243,12 +243,16 @@
         </Style>
         <!--#endregion-->
 
-  
+        <!--#region VENTANA CARRITO-->
+        <DataTemplate x:Name="Carritoc" DataType="{x:Type viewmodels:Carritoc}">
+        </DataTemplate>
+        <!--#endregion-->
+
+
 
     </Window.Resources>
-   
     
-                    <!--#region PRODUCTOS-->
+    <!--#region PRODUCTOS-->
     <Border CornerRadius="10"
             Background="GhostWhite">
         <Grid Name="principal"
@@ -266,6 +270,7 @@
                       PreviewMouseLeftButtonDown="PreviewMouseLefthButtonDownBG">
                     <Border CornerRadius="0,0,0,10"
                             Background="Transparent"/>
+                    <ContentControl Content="{Binding}"/>
 
 
 
@@ -469,7 +474,7 @@
                                   HorizontalAlignment="Left"
                                   Cursor="Hand"
                                   Background="Transparent"
-                                BorderBrush="Transparent">
+                                BorderBrush="Transparent" >
 
 
                                 <Grid Width="200">

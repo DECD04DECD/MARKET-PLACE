@@ -18,6 +18,8 @@ namespace MARKET_PLACE.Context
         }
         public DbSet <Usuario> Usuarios { get; set; }
         public DbSet <Rol> Roles { get; set; }
+        public DbSet<Producto> Productos { get; set; }
+        public DbSet<Genero> Generos { get; set; }
         
     }
 }

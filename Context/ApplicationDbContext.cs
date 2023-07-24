@@ -1,7 +1,6 @@
-﻿using MARKET_PLACE.Entities;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Internal;
-using MySqlX.XDevAPI.Relational;
+using MARKET_PLACE.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,10 +13,11 @@ namespace MARKET_PLACE.Context
     {
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
-            options.UseMySQL("server =localhost; database= Marketplace23BM; user= root; password=");
+            options.UseMySQL("server= localhost; database= MarketZone; user= root; password=");
         }
-        public DbSet <Usuario> Usuarios { get; set; }
-        public DbSet <Rol> Roles { get; set; }
-        
+        public DbSet<Usuario> Usuarios { get; set; }
+        public DbSet<Rol> Roles { get; set; }
+
+
     }
 }

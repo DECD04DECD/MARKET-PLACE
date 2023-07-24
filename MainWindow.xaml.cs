@@ -1,5 +1,6 @@
 ﻿using MARKET_PLACE.Context;
 using MARKET_PLACE.Entities;
+using MARKET_PLACE.Services;
 using MARKET_PLACE.Vistas;
 using System;
 using System.Collections.Generic;
@@ -39,31 +40,48 @@ namespace MARKET_PLACE
         {
             WindowState=WindowState.Minimized;
         }
-
+        UsuarioServices Services = new UsuarioServices();
         private void BtnLogin_Click(object sender, RoutedEventArgs e)
         {
-
-            Productos pr = new Productos();
-            pr.Show();
-
-            /*En prueba
+           
           try
           {
               using (var _Context = new ApplicationDbContext())
               {
-                  Usuario usuario = new Usuario();
-                  usuario.UserName = TxtUserName.Text;
-                  usuario.Password = TxtPassword.Password;
+                  String UserName = TxtUserName.Text;
+                  String Password = TxtPassword.Password;
+                  var res = Services.Login(UserName, Password);
+                  if (res.Roles.Nombre == "Administrador")
+                  {
+                      Administrador Admin = new Administrador();
+                      Close();
+                      Admin.Show();
+                  }            
+                  else if (res.Roles.Nombre == "Vendedor")
+                  {
+                      Productos pr = new Productos();
+                      Close();
+                      pr.Show();
+                  }
+                  //else if (res.Roles.Nombre == "Comprador")
+                  //  {
+                  //    return;
+                  //}
 
-              }
+                }
           }
           catch ( Exception ex)
           {
 
               throw new Exception("Error: " + ex.Message);
           }
+        }
 
-      }*/
+        private void BtnAccount_Click(object sender, RoutedEventArgs e)
+        {
+            Registro reg = new Registro();
+            reg.Show();
+            
         }
     }
 }

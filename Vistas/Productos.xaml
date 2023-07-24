@@ -251,7 +251,7 @@
 
 
     </Window.Resources>
-    
+
     <!--#region PRODUCTOS-->
     <Border CornerRadius="10"
             Background="GhostWhite">
@@ -268,17 +268,21 @@
                       Height="565"
                       Width="925"
                       PreviewMouseLeftButtonDown="PreviewMouseLefthButtonDownBG">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="38*"/>
+                        <RowDefinition Height="75*"/>
+                    </Grid.RowDefinitions>
                     <Border CornerRadius="0,0,0,10"
-                            Background="Transparent"/>
-                    <ContentControl Content="{Binding}"/>
+                            Background="Transparent" Grid.RowSpan="2"/>
+                    <ContentControl Content="{Binding}" Grid.RowSpan="2"/>
 
 
 
                 </Grid>
             </Grid>
             <!--#endregion-->
-            
-                    <!--#region PROYECT-->
+
+            <!--#region PROYECT-->
             <Grid Name="Header"
                   Height="35"
                   VerticalAlignment="Top"
@@ -293,7 +297,7 @@
                         <ColumnDefinition Width="100"/>
                     </Grid.ColumnDefinitions>
                     <!--#endregion-->
-                    
+
                     <!--#region TITLE-->
                     <TextBlock Text="STORE"
                                Grid.Column="0"
@@ -393,7 +397,7 @@
 
                 </Grid>
             </Grid>
-                
+
             <!--#region PREMENU-->
             <Grid Name="Menu"
                           Background="Transparent"
@@ -406,7 +410,7 @@
 
                 <!--#endregion-->
 
-            <!--#region Menu-->
+                <!--#region Menu-->
                 <StackPanel Background="Transparent"
                                 VerticalAlignment="top">
 
@@ -510,7 +514,7 @@
                     <!--#endregion-->
 
                     <!--#region Carrito-->
-                    <ListViewItem Height="70">
+                    <ListViewItem Height="70" Selected="ListViewItem_Selected">
                         <Button Style="{DynamicResource ListViewStely}" Name="BtnCarrito"                                  Height="50"
                                   Width="200"
                                   HorizontalAlignment="Left"
@@ -581,7 +585,7 @@
                     </ListViewItem>
 
                     <!--#endregion-->
-                    
+
                 </StackPanel>
             </Grid>
         </Grid>

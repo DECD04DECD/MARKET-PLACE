@@ -27,6 +27,7 @@
                        Text="CARRITO"
                        Foreground="Black"
                        FontSize="40"
+                       
                        HorizontalAlignment="Center"/>
             <!--#endregion-->
             

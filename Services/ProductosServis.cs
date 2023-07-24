@@ -50,7 +50,7 @@ namespace MARKET_PLACE.Services
         {
             try
             {
-                Producto? existe = this.db.Productos.FirstOrDefault(p => p.PkPelicula == producto.PkProducto);
+                Producto? existe = this.db.Productos.FirstOrDefault(p => p.PkProducto == producto.PkProducto);
 
                 if (existe == null)
                 {

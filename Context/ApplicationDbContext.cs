@@ -1,4 +1,3 @@
-﻿using MARKET_PLACE.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Internal;
 using MySqlX.XDevAPI.Relational;

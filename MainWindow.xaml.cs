@@ -43,10 +43,6 @@ namespace MARKET_PLACE
         private void BtnLogin_Click(object sender, RoutedEventArgs e)
         {
 
-            Productos pr = new Productos();
-            pr.Show();
-
-            /*En prueba
           try
           {
               using (var _Context = new ApplicationDbContext())

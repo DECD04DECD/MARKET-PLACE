@@ -13,11 +13,15 @@ namespace MARKET_PLACE.Context
     {
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
-            options.UseMySQL("server= localhost; database= MarketZone; user= root; password=");
+            options.UseMySQL("server= localhost; database= MarketZone; user= root; password=zury");
         }
-        public DbSet<Usuario> Usuarios { get; set; }
-        public DbSet<Rol> Roles { get; set; }
 
+        public DbSet <Usuario> Usuarios { get; set; }
+        public DbSet <Rol> Roles { get; set; }
+        public DbSet<Producto> Productos { get; set; }
+        public DbSet<Genero> Generos { get; set; }
+        
 
     }
 }
+//Hola Max

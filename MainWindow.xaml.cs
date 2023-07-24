@@ -43,7 +43,11 @@ namespace MARKET_PLACE
         UsuarioServices Services = new UsuarioServices();
         private void BtnLogin_Click(object sender, RoutedEventArgs e)
         {
-           
+
+
+         
+
+
           try
           {
               using (var _Context = new ApplicationDbContext())
@@ -63,10 +67,10 @@ namespace MARKET_PLACE
                       Close();
                       pr.Show();
                   }
-                  //else if (res.Roles.Nombre == "Comprador")
-                  //  {
-                  //    return;
-                  //}
+                  else if (res.Roles.Nombre == "Comprador")
+                   {
+                  return;
+                  }
 
                 }
           }

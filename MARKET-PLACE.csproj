@@ -21,6 +21,7 @@
 
     <None Remove="Vistas\Menu.png" />
     <None Remove="Vistas\mini.png" />
+    <None Remove="Vistas\Rgresar.png" />
     <None Remove="Vistas\Vender.png" />
 
   </ItemGroup>
@@ -49,6 +50,7 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Vistas\mini.png" />
+    <Resource Include="Vistas\Rgresar.png" />
     <Resource Include="Vistas\Vender.png" />
 
   </ItemGroup>

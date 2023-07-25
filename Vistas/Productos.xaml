@@ -249,7 +249,6 @@
         <!--#endregion-->
 
 
-
     </Window.Resources>
 
     <!--#region PRODUCTOS-->
@@ -514,8 +513,10 @@
                     <!--#endregion-->
 
                     <!--#region Carrito-->
-                    <ListViewItem Height="70" Selected="ListViewItem_Selected">
-                        <Button Style="{DynamicResource ListViewStely}" Name="BtnCarrito"                                  Height="50"
+                    <ListViewItem Height="70">
+                        
+                        <Button  Name="BtnCarrito"                              
+                                 Height="50"
                                   Width="200"
                                   HorizontalAlignment="Left"
                                   Cursor="Hand"

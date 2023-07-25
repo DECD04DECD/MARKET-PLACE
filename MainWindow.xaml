@@ -12,6 +12,7 @@
         WindowStyle="None"
         AllowsTransparency="True"
         Background="Transparent">
+   
     <Border CornerRadius="10"
             Background="GhostWhite">
         <Grid Name="principal"

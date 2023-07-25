@@ -5,45 +5,64 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MARKET_PLACE.Vistas"
         mc:Ignorable="d"
-        Title="Administrador" Height="450" Width="800">
+        Title="Administrador"
+        Height="600" 
+        Width="1000"
+         WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        Background="White">
+
+    
+    
+
     <Grid>
-        <Label FontSize="50" Content="Administrador" Height="100" Margin="192,10,0,0" VerticalAlignment="Top" Width="555" HorizontalAlignment="Right"/>
-        <Label Content="Nombre" HorizontalAlignment="Left" Height="34" Margin="50,103,0,0" VerticalAlignment="Top" Width="176"/>
-        <TextBox x:Name="txtNombre" HorizontalAlignment="Left" Height="19" Margin="50,137,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="102"/>
-        <Label Content="Usuario" HorizontalAlignment="Left" Height="27" Margin="50,156,0,0" VerticalAlignment="Top" Width="102"/>
-        <TextBox x:Name="txtUserName" HorizontalAlignment="Left" Height="25" Margin="50,183,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="102"/>
-        <Label Content="Password" HorizontalAlignment="Left" Height="26" Margin="50,208,0,0" VerticalAlignment="Top" Width="102"/>
-        <TextBox x:Name="txtPassword" HorizontalAlignment="Left" Height="24" Margin="50,234,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="102"/>
-        <Button x:Name="BtnAdd" Content="Guardar" HorizontalAlignment="Left" Height="23" Margin="67,339,0,0" VerticalAlignment="Top" Width="68" Background="Orange" Click="BtnAdd_Click"/>
+            <Label FontSize="50" Content="Administrador" Height="100" Margin="192,10,0,0" VerticalAlignment="Top" Width="555" HorizontalAlignment="Right"/>
+            <Label Content="Nombre" HorizontalAlignment="Left" Height="34" Margin="50,103,0,0" VerticalAlignment="Top" Width="176"/>
+            <TextBox x:Name="txtNombre" HorizontalAlignment="Left" Height="19" Margin="50,137,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="102"/>
+            <Label Content="Usuario" HorizontalAlignment="Left" Height="27" Margin="50,156,0,0" VerticalAlignment="Top" Width="102"/>
+            <TextBox x:Name="txtUserName" HorizontalAlignment="Left" Height="25" Margin="50,183,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="102"/>
+            <Label Content="Password" HorizontalAlignment="Left" Height="26" Margin="50,208,0,0" VerticalAlignment="Top" Width="102"/>
+            <TextBox x:Name="txtPassword" HorizontalAlignment="Left" Height="24" Margin="50,234,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="102"/>
+            <Button x:Name="BtnAdd" Content="Guardar" HorizontalAlignment="Left" Height="23" Margin="67,339,0,0" VerticalAlignment="Top" Width="68" Background="Orange" Click="BtnAdd_Click"/>
 
-        <DataGrid x:Name="UserTable" AutoGenerateColumns="False" CanUserAddRows="False" IsReadOnly="True" ColumnWidth="*" IsSynchronizedWithCurrentItem="True" Margin="183,127,44,59">
-            <DataGrid.Columns>
-                <DataGridTextColumn Header="Id" Binding="{Binding PkUsuario}" />
-                <DataGridTextColumn Header="Nombre" Binding="{Binding Nombre}" />
-                <DataGridTextColumn Header="Usuario" Binding="{Binding UserName}" />
-                <DataGridTextColumn Header="Password" Binding="{Binding Password}" />
-                <DataGridTextColumn Header="Rol" Binding="{Binding Roles.Nombre}" />
+            <DataGrid x:Name="UserTable" AutoGenerateColumns="False" CanUserAddRows="False" IsReadOnly="True" ColumnWidth="*" IsSynchronizedWithCurrentItem="True" Margin="183,127,44,59">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Id" Binding="{Binding PkUsuario}" />
+                    <DataGridTextColumn Header="Nombre" Binding="{Binding Nombre}" />
+                    <DataGridTextColumn Header="Usuario" Binding="{Binding UserName}" />
+                    <DataGridTextColumn Header="Password" Binding="{Binding Password}" />
+                    <DataGridTextColumn Header="Rol" Binding="{Binding Roles.Nombre}" />
 
-                <DataGridTemplateColumn Header="Editar">
-                    <DataGridTemplateColumn.CellTemplate>
-                        <DataTemplate>
-                            <Button Content="Edit" Click="EditItem" />
-                        </DataTemplate>
-                    </DataGridTemplateColumn.CellTemplate>
-                </DataGridTemplateColumn>
-                <DataGridTemplateColumn Header="Delete">
-                    <DataGridTemplateColumn.CellTemplate>
-                        <DataTemplate>
-                            <Button Content="Delete" Click="DeletItem"/>
-                        </DataTemplate>
-                    </DataGridTemplateColumn.CellTemplate>
+                    <DataGridTemplateColumn Header="Editar">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Content="Edit" Click="EditItem" />
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTemplateColumn Header="Delete">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Content="Delete" Click="DeletItem"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
 
-                </DataGridTemplateColumn>
-            </DataGrid.Columns>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+            </DataGrid>
 
-        </DataGrid>
-        <Label Content="Rol" HorizontalAlignment="Left" Height="26" Margin="50,263,0,0" VerticalAlignment="Top" Width="108"/>
-        <ComboBox x:Name="SelectRol" HorizontalAlignment="Left" Margin="50,289,0,0" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="txtPkUser" HorizontalAlignment="Left" Height="18" Margin="50,85,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="102" IsEnabled="False"/>
-    </Grid>
+            <!--#region Botones-->
+            <Label Content="Rol" HorizontalAlignment="Left" Height="26" Margin="50,263,0,0" VerticalAlignment="Top" Width="108"/>
+            <ComboBox x:Name="SelectRol" HorizontalAlignment="Left" Margin="50,289,0,0" VerticalAlignment="Top" Width="120"/>
+            <TextBox x:Name="txtPkUser" HorizontalAlignment="Left" Height="18" Margin="50,85,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="102" IsEnabled="False"/>
+            <Button Content="" HorizontalAlignment="Left" Margin="33,19,0,0" VerticalAlignment="Top" Width="43" Height="42" BorderBrush="Transparent">
+                <Button.Background>
+                    <ImageBrush ImageSource="/Vistas/Rgresar.png"/>
+                </Button.Background>
+            </Button>
+        </Grid>
+        <!--#endregion-->
+   
+
 </Window>

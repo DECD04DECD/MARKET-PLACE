@@ -15,7 +15,7 @@ namespace MARKET_PLACE.Entities
         }
         [Key]
         public int PkGenero { get; set; }
-        public string Nombre { get; set; }
+        public string NombreG { get; set; }
         public List<Producto> Productos { get; set; }
         public ICollection<Producto_Descripcion> ProductosGenero { get; set; }
     }

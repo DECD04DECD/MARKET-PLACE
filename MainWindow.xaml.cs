@@ -41,55 +41,53 @@ namespace MARKET_PLACE
             WindowState=WindowState.Minimized;
         }
         UsuarioServices Services = new UsuarioServices();
-        private void BtnLogin_Click(object sender, RoutedEventArgs e)
+     
+     
+        private void BtnLogin_Click_1(object sender, RoutedEventArgs e)
         {
-            try
-            {
-                using (var _Context = new ApplicationDbContext())
+                try
                 {
-                    String UserName = TxtUserName.Text;
-                    String Password = TxtPassword.Password;
-                    var res = Services.Login(UserName, Password);
-                    if (res != null)
+                    using (var _Context = new ApplicationDbContext())
                     {
-                        if (res.Roles.Nombre == "Administrador")
+                        String UserName = TxtUserName.Text;
+                        String Password = TxtPassword.Password;
+                        var res = Services.Login(UserName, Password);
+                        if (res != null)
                         {
-                            Administrador Admin = new Administrador();
-                            Close();
-                            Admin.Show();
-                        }
-                        else if (res.Roles.Nombre == "Vendedor")
-                        {
-                            Productos pr = new Productos();
-                            Close();
-                            pr.Show();
-                        }
-                        else if (res.Roles.Nombre == "Comprador")
-                        {
-                            return;
-                        }
+                            if (res.Roles.Nombre == "Administrador")
+                            {
+                                Administrador Admin = new Administrador();
+                                Close();
+                                Admin.Show();
+                            }
+                            else if (res.Roles.Nombre == "Vendedor")
+                            {
+                                Productos pr = new Productos();
+                                Close();
+                                pr.Show();
+                            }
+                            else if (res.Roles.Nombre == "Comprador")
+                            {
+                                return;
+                            }
 
+                        }
+                        else
+                        {
+                            MessageBox.Show("Usuario Inexistente");
+                        }
                     }
-
-                
-
-                    else
-                    {
-                        MessageBox.Show("Usuario Inexistente");
-                    }     
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception("Error: " + ex.Message);
                 }
             }
-            catch (Exception ex)
-            {
 
-                throw new Exception("Error: " + ex.Message);
-            }
-        }
-        private void BtnAccount_Click(object sender, RoutedEventArgs e)
+        private void BtnCrearCuenta_Click(object sender, RoutedEventArgs e)
         {
             Registro reg = new Registro();
             reg.Show();
-            
         }
     }
-}
+    }

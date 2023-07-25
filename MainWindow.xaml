@@ -12,7 +12,7 @@
         WindowStyle="None"
         AllowsTransparency="True"
         Background="Transparent">
-   
+
     <Border CornerRadius="10"
             Background="GhostWhite">
         <Grid Name="principal"
@@ -56,7 +56,7 @@
                             Margin="0,5,30,0" Click="BtnMinimizar_Click"
                             
                             >
-                        
+
                     </Button>
                     <!--#endregion-->
 
@@ -75,10 +75,13 @@
                                Cursor="Hand"/>
                     </Button>
                     <!--#endregion-->
+                    
                 </Grid>
             </Grid>
+            
+            
             <Image Source="/login.png"
-                               Cursor="Hand" Margin="53,49,636,14" RenderTransformOrigin="0.5,0.5" Stretch="Fill" IsEnabled="False">
+                               Cursor="Hand" Margin="99,45,590,18" RenderTransformOrigin="0.5,0.5" Stretch="Fill" IsEnabled="False">
                 <Image.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
@@ -88,18 +91,124 @@
                     </TransformGroup>
                 </Image.RenderTransform>
             </Image>
-            <PasswordBox x:Name="TxtPassword" HorizontalAlignment="Left" Margin="669,334,0,0" VerticalAlignment="Top" Width="120"/>
-            <TextBox x:Name="TxtUserName" HorizontalAlignment="Left" Margin="669,293,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-            <Label Content="MARKET-ZONE" HorizontalAlignment="Left" Margin="543,99,0,0" VerticalAlignment="Top" FontSize="48" FontFamily="Javanese Text"/>
-            <Label Content="USER NAME" HorizontalAlignment="Left" Margin="537,0,0,0" VerticalAlignment="Center" FontFamily="Arial Black" FontSize="16"/>
-            <Label Content="PASSWORD" HorizontalAlignment="Left" Margin="536,327,0,0" VerticalAlignment="Top" FontFamily="Arial Black" FontSize="16"/>
-            <Button x:Name="BtnLogin" Content="LOGIN" HorizontalAlignment="Left" Margin="534,399,0,0" VerticalAlignment="Top" Height="39" Width="307" Background="#FFE76F51" BorderBrush="Transparent" Click="BtnLogin_Click"/>
-            <Label Content="No tienes cuenta?" HorizontalAlignment="Left" Margin="532,461,0,0" VerticalAlignment="Top"/>
-            <Button x:Name="BtnAccount" Content="Crear cuenta" HorizontalAlignment="Left" Margin="638,464,0,0" VerticalAlignment="Top" Background="Transparent" BorderBrush="Transparent" Foreground="#FF0041BC" Click="BtnAccount_Click"/>
-            <ComboBox HorizontalAlignment="Left" Margin="654,221,0,0" VerticalAlignment="Top" Width="120" Text="Selecciona Rol" Background="#FFE6542F" Cursor=""/>
+
+
+            <!--#region usuario-->
+            <TextBlock HorizontalAlignment="Left"
+                       Margin="526,211,0,0"
+                       TextWrapping="Wrap"
+                       Text="USUARIO"
+                       VerticalAlignment="Top" 
+                       FontFamily="Arial Rounded MT Bold"/>
+
+            <TextBox x:Name="TxtUserName"
+                HorizontalAlignment="Left" 
+                     Margin="525,227,0,0" 
+                     TextWrapping="Wrap" 
+                     VerticalAlignment="Top" 
+                     Width="200"
+                     FontSize="13"
+                     FontWeight="Medium"
+                         
+                         Foreground="Black"
+                         CaretBrush="Black"
+                         BorderBrush="Black"
+                         BorderThickness="0,0,0,1"
+                         Height="28"
+                     Padding="25,0,0,0">
+                
+                <TextBox.Background>
+                    <ImageBrush ImageSource="C:\Users\zury\Desktop\MARKET-PLACE\Imagenes\Login\usuario.png"
+                                Stretch="Uniform"
+                                AlignmentX="Left">
+                        
+                    </ImageBrush>
+                </TextBox.Background>
+            </TextBox>
+            
+            
+
+
+            <!--#endregion-->
+                
+            <!--#region contraseña-->
+            <TextBlock HorizontalAlignment="Left"
+                       Margin="525,0,0,0"
+                       TextWrapping="Wrap"
+                       Text="CONTRASEÑA"
+                       VerticalAlignment="Center" 
+                       FontFamily="Arial Rounded MT Bold"/>
+
+            <PasswordBox x:Name="TxtPassword"
+                HorizontalAlignment="Left" 
+                     Margin="525,310,0,0"  
+                     VerticalAlignment="Top" 
+                     Width="200"
+                     FontSize="13"
+                     FontWeight="Medium"
+                         
+                         Foreground="Black"
+                         CaretBrush="Black"
+                         BorderBrush="Black"
+                         BorderThickness="0,0,0,1"
+                         Height="28"
+                     Padding="25,0,0,0">
+
+                <PasswordBox.Background>
+                    <ImageBrush ImageSource="C:\Users\zury\Desktop\MARKET-PLACE\Imagenes\Login\bloquear.png"
+                                Stretch="Uniform"
+                                AlignmentX="Left">
+                    </ImageBrush>
+                </PasswordBox.Background>
+            </PasswordBox>
+            <!--#endregion-->
+                
+                <!--#region titulo-->
+            <TextBlock HorizontalAlignment="Left"
+                       Margin="540,101,0,0"
+                       TextWrapping="Wrap"
+                       Text="MARKET-ZONE"
+                       VerticalAlignment="Top" 
+                       FontSize="24"
+                       FontFamily="Arial Rounded MT Bold"/>
+<!--#endregion-->
+
+                <!--#region btn iniciar sesiòn-->
+            <Button x:Name="BtnLogin"
+                Content="Iniciar Sesión" 
+                    BorderBrush="Transparent"
+                    Background="DarkOrange"
+                    HorizontalAlignment="Left"
+                    Margin="520,367,0,0"
+                    VerticalAlignment="Top" 
+                    Height="30" Width="200" Click="BtnLogin_Click_1"/>
+            <!--#endregion-->
+            
+            <!--#region crear cuenta-->
+            <Button x:Name="BtnCrearCuenta"
+                     
+                HorizontalAlignment="Left" 
+                     Margin="605,418,0,0" 
+                     
+                     VerticalAlignment="Top" 
+                     Width="39"
+                     FontSize="13"
+                     FontWeight="Medium"
+                         Background="Transparent"
+                         Foreground="blue"
+                         
+                         BorderBrush="Black"
+                         BorderThickness="0,0,0,1"
+                         Height="17" Content="Crear" Click="BtnCrearCuenta_Click" />
+            <TextBlock HorizontalAlignment="Left"
+                       Margin="522,419,0,0"
+                       TextWrapping="Wrap"
+                       Text="Tienes cuenta?"
+                       VerticalAlignment="Top"/>
+<!--#endregion-->
+
+           
         </Grid>
-
-
     </Border>
 
 </Window>

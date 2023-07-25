@@ -21,9 +21,5 @@ namespace MARKET_PLACE.Entities
         public double Precio { get; set; }
         public List<Genero> Generos { get; set; }
         public ICollection<Producto_Descripcion> ProductosGenero { get; set; }
-
-    
-        
-
     }
 }

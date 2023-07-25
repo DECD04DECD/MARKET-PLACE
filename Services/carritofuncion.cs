@@ -43,15 +43,6 @@ namespace MARKET_PLACE.Services
                             
                             MessageBox.Show("Pago de producto exitoso");
                         }
-                   
-
-
         }
-
-
-
-
-
-
     }
 }

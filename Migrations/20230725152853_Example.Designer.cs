@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MARKET_PLACE.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20230725124418_Example")]
+    [Migration("20230725152853_Example")]
     partial class Example
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -81,6 +81,9 @@ namespace MARKET_PLACE.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
+                    b.Property<double>("Precio")
+                        .HasColumnType("double");
+
                     b.HasKey("PkProducto");
 
                     b.ToTable("Productos");
@@ -89,22 +92,26 @@ namespace MARKET_PLACE.Migrations
                         new
                         {
                             PkProducto = 3,
-                            Nombre = "Maquillaje"
+                            Nombre = "Maquillaje",
+                            Precio = 1850.0
                         },
                         new
                         {
                             PkProducto = 2,
-                            Nombre = "Playera"
+                            Nombre = "Playera",
+                            Precio = 649.99000000000001
                         },
                         new
                         {
                             PkProducto = 1,
-                            Nombre = "Telefono"
+                            Nombre = "Telefono",
+                            Precio = 8999.9899999999998
                         },
                         new
                         {
                             PkProducto = 4,
-                            Nombre = "Balon"
+                            Nombre = "Balon",
+                            Precio = 500.0
                         });
                 });
 

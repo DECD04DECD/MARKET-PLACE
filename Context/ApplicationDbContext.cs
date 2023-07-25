@@ -13,7 +13,7 @@ namespace MARKET_PLACE.Context
     {
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
-            options.UseMySQL("server= localhost; database= MarketZone23BM; user= root; password=");
+            options.UseMySQL("server= localhost; database= Market_Zone23BM; user= root; password=");
         }
 
         public DbSet <Usuario> Usuarios { get; set; }
@@ -115,26 +115,30 @@ namespace MARKET_PLACE.Context
                 new Producto
                 {
 
-                 PkProducto = 3,
-                 Nombre = "Maquillaje"
+                    PkProducto = 3,
+                    Nombre = "Maquillaje",
+                    Precio = 1850.00,
 
                 },
                 new Producto
                 {
                     PkProducto = 2,
-                    Nombre = "Playera"
+                    Nombre = "Playera",
+                    Precio = 649.99,
 
                 },
                 new Producto
                 {
                     PkProducto = 1,
-                    Nombre = "Telefono"
+                    Nombre = "Telefono",
+                    Precio = 8999.99,
 
                 },
                 new Producto
                 {
                     PkProducto = 4,
-                    Nombre = "Balon"
+                    Nombre = "Balon",
+                    Precio = 500.00
                 }
             );
 

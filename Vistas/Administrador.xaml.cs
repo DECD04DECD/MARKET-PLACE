@@ -112,8 +112,7 @@ namespace MARKET_PLACE.Vistas
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow vl = new MainWindow();
-            vl.Show();
+            Close();
         }
     }
 }

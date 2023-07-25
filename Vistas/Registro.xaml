@@ -5,7 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MARKET_PLACE.Vistas"
         mc:Ignorable="d"
-        Title="Registro" Height="450" Width="800">
+        Title="Registro"
+        Height="600"
+        Width="1000">
     <Grid>
         <Label Content="USER NAME:" HorizontalAlignment="Left" Margin="189,149,0,0" VerticalAlignment="Top" FontFamily="Arial Black" FontSize="16"/>
         <Label Content="NOMBRE:" HorizontalAlignment="Left" Margin="217,102,0,0" VerticalAlignment="Top" FontFamily="Arial Black" FontSize="16"/>

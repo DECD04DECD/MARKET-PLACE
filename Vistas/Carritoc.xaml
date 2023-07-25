@@ -12,7 +12,7 @@
     <!--#region CONTENIDO-->
 
     <Border CornerRadius="10" Background="White">
-        <Grid Name="GridCarrito">
+        <Grid Name="GridCarrito" Background="White">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="*"/>
@@ -58,7 +58,7 @@
 
             <!--#region BOTONES-->
             <StackPanel Grid.Row="2" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right" Margin="10">
-                <Button Content="Vaciar Carrito" Command="{Binding VaciarCarritoCommand, RelativeSource={RelativeSource AncestorType=UserControl}}"/>
+                <Button x:Name="btnVaciarCarrito" Content="Vaciar Carrito" Command="{Binding vaciador, RelativeSource={RelativeSource AncestorType=UserControl}}" Click="VaciarCarrito_Click"/>
                 <Button Content="Pagar Carrito" Command="{Binding PagarCarritoCommand, RelativeSource={RelativeSource AncestorType=UserControl}}"/>
             </StackPanel>
             <!--#endregion-->

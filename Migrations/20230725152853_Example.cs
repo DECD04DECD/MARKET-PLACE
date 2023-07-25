@@ -26,7 +26,8 @@ namespace MARKET_PLACE.Migrations
                 {
                     PkProducto = table.Column<int>(type: "int", nullable: false)
                         .Annotation("MySQL:ValueGenerationStrategy", MySQLValueGenerationStrategy.IdentityColumn),
-                    Nombre = table.Column<string>(type: "text", nullable: false)
+                    Nombre = table.Column<string>(type: "text", nullable: false),
+                    Precio = table.Column<double>(type: "double", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -129,13 +130,13 @@ namespace MARKET_PLACE.Migrations
 
             migrationBuilder.InsertData(
                 table: "Productos",
-                columns: new[] { "PkProducto", "Nombre" },
+                columns: new[] { "PkProducto", "Nombre", "Precio" },
                 values: new object[,]
                 {
-                    { 3, "Maquillaje" },
-                    { 2, "Playera" },
-                    { 1, "Telefono" },
-                    { 4, "Balon" }
+                    { 3, "Maquillaje", 1850.0 },
+                    { 2, "Playera", 649.99000000000001 },
+                    { 1, "Telefono", 8999.9899999999998 },
+                    { 4, "Balon", 500.0 }
                 });
 
             migrationBuilder.InsertData(

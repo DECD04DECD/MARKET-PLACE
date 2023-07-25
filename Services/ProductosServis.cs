@@ -63,7 +63,7 @@ namespace MARKET_PLACE.Services
 
                 return true;
             }
-            catch (Exception err)
+            catch (Exception ex)
             {
                 return false;
             }
@@ -82,7 +82,7 @@ namespace MARKET_PLACE.Services
                 this.db.SaveChanges();
                 return true;
             }
-            catch (Exception err)
+            catch (Exception ex)
             {
                 return false;
             }

@@ -68,15 +68,12 @@ namespace MARKET_PLACE
                         {
                             return;
                         }
-                        else
-                        {
-                            MessageBox.Show("Usuario Inexistente");
-                        }
+                        
                     }
 
                     else
                     {
-                        MessageBox.Show("Agregar Datos");
+                        MessageBox.Show("Usuario Inexistente");
                     }
 
 

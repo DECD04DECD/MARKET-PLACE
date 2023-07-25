@@ -17,10 +17,9 @@
     <None Remove="Vistas\Home.png" />
     <None Remove="Vistas\info.png" />
 
-    <None Remove="Vistas\NARANMJA.jpeg" />
-
     <None Remove="Vistas\Menu.png" />
     <None Remove="Vistas\mini.png" />
+    <None Remove="Vistas\Rgresar.png" />
     <None Remove="Vistas\Vender.png" />
 
   </ItemGroup>
@@ -43,12 +42,11 @@
     <Resource Include="Vistas\Home.png" />
     <Resource Include="Vistas\info.png" />
 
-    <Resource Include="Vistas\NARANMJA.jpeg" />
-
     <Resource Include="Vistas\Menu.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Vistas\mini.png" />
+    <Resource Include="Vistas\Rgresar.png" />
     <Resource Include="Vistas\Vender.png" />
 
   </ItemGroup>

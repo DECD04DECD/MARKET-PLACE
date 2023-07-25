@@ -1,0 +1,23 @@
+﻿<UserControl x:Class="MARKET_PLACE.Vistas.Vendedor"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MARKET_PLACE.Vistas"
+             mc:Ignorable="d" 
+             d:DesignHeight="565" 
+             d:DesignWidth="925"
+             Background="Transparent">
+
+    <!--#region CONTENIDO-->
+    <Border CornerRadius="10" Background="White">
+        <Grid Name="GridCarrito" Background="White">
+
+            <!--#region TITULO-->
+            <TextBlock Grid.Row="0" Text="VENDER PRODUCTO" Foreground="Black" FontSize="40" HorizontalAlignment="Center" FontFamily="Arial Rounded MT Bold" Margin="0,17,0,502"/>
+            <!--#endregion-->
+
+
+        </Grid>
+    </Border>
+</UserControl>

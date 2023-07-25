@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MARKET_PLACE.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20230725154701_Example")]
-    partial class Example
+    [Migration("20230725170522_example")]
+    partial class example
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

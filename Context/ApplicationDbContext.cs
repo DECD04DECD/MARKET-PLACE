@@ -13,7 +13,10 @@ namespace MARKET_PLACE.Context
     {
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
-            options.UseMySQL("server= localhost; database= Market_Zone23BM; user= root; password=");
+
+            options.UseMySQL("server= localhost; database= MarketZonezx; user= root; password=zury");
+
+
         }
 
         public DbSet <Usuario> Usuarios { get; set; }

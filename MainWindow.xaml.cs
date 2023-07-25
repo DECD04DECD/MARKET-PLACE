@@ -68,15 +68,15 @@ namespace MARKET_PLACE
                         {
                             return;
                         }
+
                     }
+
+                
 
                     else
                     {
                         MessageBox.Show("Usuario Inexistente");
-                    }
-
-
-                    
+                    }     
                 }
             }
             catch (Exception ex)
@@ -85,7 +85,6 @@ namespace MARKET_PLACE
                 throw new Exception("Error: " + ex.Message);
             }
         }
-
         private void BtnAccount_Click(object sender, RoutedEventArgs e)
         {
             Registro reg = new Registro();

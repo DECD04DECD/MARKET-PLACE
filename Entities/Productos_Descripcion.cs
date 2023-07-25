@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MARKET_PLACE.Entities
 {
@@ -12,10 +8,10 @@ namespace MARKET_PLACE.Entities
         
         [ForeignKey("Producto")]
         public int ProductoId { get; set; }
-        public Producto Producto { get; set; }
+        public Producto NomProducto { get; set; }
 
         [ForeignKey("Genero")]
         public int GeneroId { get; set; }
-        public Genero Genero { get; set; }
+        public Genero NomGenero { get; set; }
     }
 }

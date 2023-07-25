@@ -8,8 +8,16 @@
              d:DesignHeight="565" 
              d:DesignWidth="925"
              Background="Transparent">
-    
-    <Grid>
-            
-    </Grid>
+
+    <!--#region CONTENIDO-->
+    <Border CornerRadius="10" Background="White">
+        <Grid Name="GridCarrito" Background="White">
+
+            <!--#region TITULO-->
+            <TextBlock Grid.Row="0" Text="VENDER PRODUCTO" Foreground="Black" FontSize="40" HorizontalAlignment="Center" FontFamily="Arial Rounded MT Bold" Margin="0,17,0,502"/>
+            <!--#endregion-->
+
+
+        </Grid>
+    </Border>
 </UserControl>

@@ -53,5 +53,10 @@ namespace MARKET_PLACE.Vistas
         {
             DataContext = new Carritoc();
         }
+
+        private void BtnVender_Click(object sender, RoutedEventArgs e)
+        {
+            DataContext = new Vendedor();
+        }
     }
 }

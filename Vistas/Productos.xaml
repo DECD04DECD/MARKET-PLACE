@@ -248,6 +248,11 @@
         </DataTemplate>
         <!--#endregion-->
 
+        <!--#region VENTANA CARRITO-->
+        <DataTemplate x:Name="Vendedor" DataType="{x:Type viewmodels:Vendedor}">
+        </DataTemplate>
+        <!--#endregion-->
+
 
     </Window.Resources>
 
@@ -557,7 +562,7 @@
                                   HorizontalAlignment="Left"
                                   Cursor="Hand"
                                   Background="Transparent"
-                                BorderBrush="Transparent"
+                                BorderBrush="Transparent" Click="BtnVender_Click"
                              >
 
 

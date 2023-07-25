@@ -10,7 +10,6 @@
              Background="Transparent">
 
     <!--#region CONTENIDO-->
-
     <Border CornerRadius="10" Background="White">
         <Grid Name="GridCarrito" Background="White">
             <Grid.RowDefinitions>
@@ -25,7 +24,7 @@
             <!--#endregion-->
 
             <!--#region TITULO-->
-            <TextBlock Grid.Row="0" Grid.ColumnSpan="2" Text="CARRITO" Foreground="Black" FontSize="40" HorizontalAlignment="Center"/>
+            <TextBlock Grid.Row="0" Grid.ColumnSpan="2" Text="CARRITO" Foreground="Black" FontSize="40" HorizontalAlignment="Center" FontFamily="Arial Rounded MT Bold"/>
             <!--#endregion-->
 
             <!--#region PRODUCTOS-->

@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MARKET_PLACE.Vistas"
+        xmlns:viewmodels="clr-namespace:MARKET_PLACE.Vistas"
         mc:Ignorable="d"
         Title="Productos"
         Height="600"
@@ -38,8 +39,8 @@
         <SolidColorBrush x:Key="Button.Disabled.Border" Color="#FFADB2B5"/>
         <SolidColorBrush x:Key="Button.Disabled.Foreground" Color="#FF838383"/>
         <!--#endregion-->
-        
-    <!--#region BTN SHOW/HIDE-->
+
+        <!--#region BTN SHOW/HIDE-->
         <Style x:Key="BtnShowHide" TargetType="{x:Type ToggleButton}">
             <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
             <Setter Property="Background" Value="Transparent"/>
@@ -183,14 +184,101 @@
                 </Setter.Value>
             </Setter>
         </Style>
+        <Style x:Key="FocusVisual3">
+            <Setter Property="Control.Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <Rectangle Margin="2" StrokeDashArray="1 2" Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" SnapsToDevicePixels="true" StrokeThickness="1"/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <SolidColorBrush x:Key="Button.Static.Background3" Color="#FFDDDDDD"/>
+        <SolidColorBrush x:Key="Button.Static.Border3" Color="#FF707070"/>
+        <SolidColorBrush x:Key="Button.MouseOver.Background2" Color="#FFBEE6FD"/>
+        <SolidColorBrush x:Key="Button.MouseOver.Border2" Color="#FF3C7FB1"/>
+        <SolidColorBrush x:Key="Button.Pressed.Background2" Color="#FFC4E5F6"/>
+        <SolidColorBrush x:Key="Button.Pressed.Border2" Color="#FF2C628B"/>
+        <SolidColorBrush x:Key="Button.Disabled.Background3" Color="#FFF4F4F4"/>
+        <SolidColorBrush x:Key="Button.Disabled.Border3" Color="#FFADB2B5"/>
+        <SolidColorBrush x:Key="Button.Disabled.Foreground3" Color="#FF838383"/>
+        <Style x:Key="BtnCuenta" TargetType="{x:Type Button}">
+            <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual3}"/>
+            <Setter Property="Background" Value="{StaticResource Button.Static.Background3}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource Button.Static.Border3}"/>
+            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="1"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border CornerRadius="10" x:Name="border" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" SnapsToDevicePixels="true">
+                            <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsDefaulted" Value="true">
+                                <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.MouseOver.Background2}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.MouseOver.Border2}"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="true">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Pressed.Background2}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Pressed.Border2}"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Disabled.Background3}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Disabled.Border3}"/>
+                                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource Button.Disabled.Foreground3}"/>
+
+
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <!--#endregion-->
+
+        <!--#region VENTANA CARRITO-->
+        <DataTemplate x:Name="Carritoc" DataType="{x:Type viewmodels:Carritoc}">
+        </DataTemplate>
+        <!--#endregion-->
+
+
+
     </Window.Resources>
-    <!--#endregion-->
     
+    <!--#region PRODUCTOS-->
     <Border CornerRadius="10"
             Background="GhostWhite">
         <Grid Name="principal"
               Background="Transparent">
 
+            <Grid Name="Pincipal"
+                  Background="Transparent">
+
+                <Grid Name="BtnContent"
+                      Background="Transparent"
+                      VerticalAlignment="Bottom"
+                      HorizontalAlignment="Right"
+                      Height="565"
+                      Width="925"
+                      PreviewMouseLeftButtonDown="PreviewMouseLefthButtonDownBG">
+                    <Border CornerRadius="0,0,0,10"
+                            Background="Transparent"/>
+                    <ContentControl Content="{Binding}"/>
+
+
+
+                </Grid>
+            </Grid>
+            <!--#endregion-->
+            
+                    <!--#region PROYECT-->
             <Grid Name="Header"
                   Height="35"
                   VerticalAlignment="Top"
@@ -204,7 +292,8 @@
                         <ColumnDefinition Width="220"/>
                         <ColumnDefinition Width="100"/>
                     </Grid.ColumnDefinitions>
-
+                    <!--#endregion-->
+                    
                     <!--#region TITLE-->
                     <TextBlock Text="STORE"
                                Grid.Column="0"
@@ -216,36 +305,32 @@
                     <!--#endregion-->
 
                     <!--#region BTN CUENTA-->
-
                     <Button x:Name="BtnCuenta"
                             Grid.Column="1"
                             Background="Transparent"
-                           BorderBrush="Transparent"
-                            FontSize="15"
+                            BorderBrush="Transparent"
                             Foreground="Black"
-                            VerticalContentAlignment="Center"
-                            HorizontalContentAlignment="Left"
-                            Cursor="Hand" Margin="0,0,117,0">
+                            FontSize="15"
+                            VerticalAlignment="Center"
+                                HorizontalAlignment="Left"
+                            Cursor="Hand">
                         <Grid>
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="19*"/>
-                                <RowDefinition Height="*"/>
-                            </Grid.RowDefinitions>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="15"/>
                                 <ColumnDefinition/>
                             </Grid.ColumnDefinitions>
-                            <TextBlock Style="{DynamicResource BTNHEDERSTYLE}" Grid.Column="1"
-                                       Text="MI CUENTA"
-                                       HorizontalAlignment="Left"
+                            <Image Source="/Vistas/configuracion.png"
+                                   Grid.Column="0"
+                                   VerticalAlignment="Center"/>
+                            <TextBlock Text="Mi cuenta"
+                                       Grid.Column="1"
+                                       HorizontalAlignment="Center"
                                        VerticalAlignment="Center"
                                        Margin="5,0,0,0"/>
-                            <Image
-                                   HorizontalAlignment="Center"
-                                   VerticalAlignment="Center"
-                                   Source="/Vistas/configuracion.png"/>
                         </Grid>
+
                     </Button>
+
                     <!--#endregion-->
 
                     <!--#region info-->
@@ -266,7 +351,7 @@
                             <Image Source="/Vistas/info.png"
                                    Grid.Column="0"
                                    VerticalAlignment="Center"/>
-                            <TextBlock Text="ACERCA DE"
+                            <TextBlock Text="Ayuda"
                                        Grid.Column="1"
                                        HorizontalAlignment="Center"
                                        VerticalAlignment="Center"
@@ -308,7 +393,7 @@
 
                 </Grid>
             </Grid>
-
+                
             <!--#region PREMENU-->
             <Grid Name="Menu"
                           Background="Transparent"
@@ -321,7 +406,7 @@
 
                 <!--#endregion-->
 
-                <!--#region Menu-->
+            <!--#region Menu-->
                 <StackPanel Background="Transparent"
                                 VerticalAlignment="top">
 
@@ -389,7 +474,7 @@
                                   HorizontalAlignment="Left"
                                   Cursor="Hand"
                                   Background="Transparent"
-                                BorderBrush="Transparent">
+                                BorderBrush="Transparent" >
 
 
                                 <Grid Width="200">
@@ -431,7 +516,7 @@
                                   HorizontalAlignment="Left"
                                   Cursor="Hand"
                                   Background="Transparent"
-                                BorderBrush="Transparent">
+                                BorderBrush="Transparent" Click="Carrito">
 
 
                             <Grid Width="200">
@@ -443,7 +528,7 @@
                                 <Image Width="50"
                                            Grid.Column="0"
                                            HorizontalAlignment="Left"
-                                           Source="/Vistas/Carrito.png" Margin="3,6,0,-6"/>
+                                           Source="/Vistas/Carrito.png" Margin="3,6,0,0" Height="46" VerticalAlignment="Top"/>
                                 <TextBlock Grid.Column="1"
                                                Text="Carrito"
                                                FontWeight="SemiBold"
@@ -496,7 +581,7 @@
                     </ListViewItem>
 
                     <!--#endregion-->
-
+                    
                 </StackPanel>
             </Grid>
         </Grid>

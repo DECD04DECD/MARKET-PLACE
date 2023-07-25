@@ -8,34 +8,62 @@
              d:DesignHeight="565"
              d:DesignWidth="925"
              Background="Transparent">
-    
+
     <!--#region CONTENIDO-->
 
-    <Border CornerRadius="10"
-            Background="White">
+    <Border CornerRadius="10" Background="White">
         <Grid Name="GridCarrito">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="1*"/>
             </Grid.ColumnDefinitions>
             <!--#endregion-->
-            
+
             <!--#region TITULO-->
-            <TextBlock Grid.Row="0"
-                       Grid.Column="1"
-                       Text="CARRITO"
-                       Foreground="Black"
-                       FontSize="40"
-                       HorizontalAlignment="Center"/>
+            <TextBlock Grid.Row="0" Grid.ColumnSpan="2" Text="CARRITO" Foreground="Black" FontSize="40" HorizontalAlignment="Center"/>
             <!--#endregion-->
-            
-            
-            
+
+            <!--#region PRODUCTOS-->
+            <ListBox Grid.Row="1" Grid.ColumnSpan="2" Margin="10" ItemsSource="{Binding ProductosEnCarrito}">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Margin="5">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="{Binding Nombre}" Grid.Column="0" VerticalAlignment="Center"/>
+                            <TextBlock Text="{Binding Descripcion}" Grid.Column="1" VerticalAlignment="Center"/>
+                            <TextBlock Text="{Binding Costo}" Grid.Column="2" VerticalAlignment="Center"/>
+                            <TextBlock Text="{Binding Cantidad}" Grid.Column="3" VerticalAlignment="Center"/>
+                            <Button Content="Eliminar" Command="{Binding DataContext.EliminarProductoCommand, RelativeSource={RelativeSource AncestorType=UserControl}}" CommandParameter="{Binding}"/>
+                            <Button Content="Aumentar Cantidad" Grid.Column="3" Margin="5" HorizontalAlignment="Right" Command="{Binding DataContext.AumentarCantidadCommand, RelativeSource={RelativeSource AncestorType=UserControl}}" CommandParameter="{Binding}"/>
+                        </Grid>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+            <!--#endregion-->
+
+            <!--#region TOTAL-->
+            <TextBlock Grid.Row="2" Text="Total:" Foreground="Black" FontSize="20" HorizontalAlignment="Right" Margin="10"/>
+            <TextBlock Grid.Row="2" Grid.Column="1" Text="{Binding TotalCarrito}" Foreground="Black" FontSize="20" HorizontalAlignment="Left" Margin="10"/>
+            <!--#endregion-->
+
+            <!--#region BOTONES-->
+            <StackPanel Grid.Row="2" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right" Margin="10">
+                <Button Content="Vaciar Carrito" Command="{Binding VaciarCarritoCommand, RelativeSource={RelativeSource AncestorType=UserControl}}"/>
+                <Button Content="Pagar Carrito" Command="{Binding PagarCarritoCommand, RelativeSource={RelativeSource AncestorType=UserControl}}"/>
+            </StackPanel>
+            <!--#endregion-->
+
         </Grid>
     </Border>
-   
-    
-    
-    
+
 </UserControl>

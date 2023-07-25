@@ -36,6 +36,17 @@ namespace MARKET_PLACE.Services
 
 
         }
+        public void pagar()
+        {
+           
+                        {
+                            
+                            MessageBox.Show("Pago de producto exitoso");
+                        }
+                   
+
+
+        }
 
 
 

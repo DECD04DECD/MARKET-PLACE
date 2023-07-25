@@ -44,5 +44,18 @@ namespace MARKET_PLACE.Vistas
             }
         }
 
+       
+
+        private void pagar_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBoxResult result = MessageBox.Show("¿Estás seguro de pagar carrito?", "Confirmar pago", MessageBoxButton.YesNo, MessageBoxImage.Question);
+
+            if (result == MessageBoxResult.Yes)
+            {
+                services.pagar();
+
+            }
+          
+        }
     }
 }

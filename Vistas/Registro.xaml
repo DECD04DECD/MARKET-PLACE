@@ -11,11 +11,16 @@
          WindowStartupLocation="CenterScreen"
         WindowStyle="None"
         AllowsTransparency="True">
+
     <Grid>
+
+        <Border Background="#e76f51"
+                Margin="0,0,0,562"/>
+
 
         <!--#region title-->
         <TextBlock HorizontalAlignment="Left"
-                       Margin="406,68,0,0"
+                       Margin="389,56,0,0"
                        TextWrapping="Wrap"
                        Text="CREA TU CUENTA"
                        VerticalAlignment="Top" 
@@ -142,9 +147,11 @@
                 VerticalAlignment="Top"
                 Width="200"
                 BorderBrush="Transparent"
-                Background="DarkOrange"
+                Background="#e76f51"
                 Click="BtnAdd_Click"/>
         <!--#endregion-->
 
+
     </Grid>
+
 </Window>

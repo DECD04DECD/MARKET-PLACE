@@ -79,7 +79,7 @@
                 </Grid>
             </Grid>
             
-            
+            <!--#region imagen-->
             <Image Source="/login.png"
                                Cursor="Hand"
                    Margin="99,45,590,18"
@@ -95,7 +95,7 @@
                     </TransformGroup>
                 </Image.RenderTransform>
             </Image>
-
+<!--#endregion-->
 
             <!--#region usuario-->
             <TextBlock HorizontalAlignment="Left"

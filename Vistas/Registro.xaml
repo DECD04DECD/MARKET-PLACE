@@ -7,14 +7,144 @@
         mc:Ignorable="d"
         Title="Registro"
         Height="600"
-        Width="1000">
+        Width="1000"
+         WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        AllowsTransparency="True">
     <Grid>
-        <Label Content="USER NAME:" HorizontalAlignment="Left" Margin="189,149,0,0" VerticalAlignment="Top" FontFamily="Arial Black" FontSize="16"/>
-        <Label Content="NOMBRE:" HorizontalAlignment="Left" Margin="217,102,0,0" VerticalAlignment="Top" FontFamily="Arial Black" FontSize="16"/>
-        <Label Content="CONTRASEÑA:" HorizontalAlignment="Left" Margin="171,197,0,0" VerticalAlignment="Top" FontFamily="Arial Black" FontSize="16"/>
-        <TextBox x:Name="TxtName" HorizontalAlignment="Center" Margin="0,107,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="TxtUserName" HorizontalAlignment="Center" Margin="0,154,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="TxtPassword" HorizontalAlignment="Center" Margin="0,199,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="BtnAdd" Content="Agregar" HorizontalAlignment="Center" Height="31" Margin="0,275,0,0" VerticalAlignment="Top" Width="140" Click="BtnAdd_Click"/>
+
+        <!--#region title-->
+        <TextBlock HorizontalAlignment="Left"
+                       Margin="406,68,0,0"
+                       TextWrapping="Wrap"
+                       Text="CREA TU CUENTA"
+                       VerticalAlignment="Top" 
+                       FontSize="24"
+                       FontFamily="Arial Rounded MT Bold"/>
+
+        <Image  Source="C:\Users\zury\Desktop\MARKET-PLACE\Imagenes\CreaCuenta\CrearCuenta.png"
+                 Cursor="Hand"
+                   Margin="-2,99,453,110"
+                   RenderTransformOrigin="0.5,0.5"
+                   Stretch="Fill" 
+                   IsEnabled="False">
+        </Image>
+        <!--#endregion-->
+
+        <!--#region user name-->
+        <TextBlock HorizontalAlignment="Left"
+                       Margin="599,152,0,0"
+                       TextWrapping="Wrap"
+                       Text="USER NAME"
+                       VerticalAlignment="Top" 
+                       FontFamily="Arial Rounded MT Bold"/>
+
+        <TextBox x:Name="TxtName"
+                 HorizontalAlignment="Left" 
+                 Margin="596,169,0,0" 
+                 TextWrapping="Wrap" 
+                 VerticalAlignment="Top"
+                 Width="200"
+                  FontSize="13"
+                     FontWeight="Medium"
+                         
+                         Foreground="Black"
+                         CaretBrush="Black"
+                         BorderBrush="Black"
+                         BorderThickness="0,0,0,1"
+                         Height="28"
+                     Padding="30,0,0,0">
+            <TextBox.Background>
+                <ImageBrush ImageSource="C:\Users\zury\Desktop\MARKET-PLACE\Imagenes\Login\usuario.png"
+                                Stretch="Uniform"
+                                AlignmentX="Left">
+                </ImageBrush>
+            </TextBox.Background>
+
+        </TextBox>
+        <!--#endregion-->
+
+        <!--#region Usuario-->
+
+        <TextBlock HorizontalAlignment="Left"
+                       Margin="599,225,0,0"
+                       TextWrapping="Wrap"
+                       Text="USUARIO"
+                       VerticalAlignment="Top" 
+                       FontFamily="Arial Rounded MT Bold"/>
+
+        <TextBox x:Name="TxtUserName"
+                 HorizontalAlignment="Left"
+                 Margin="593,241,0,0"
+                 TextWrapping="Wrap"
+                 VerticalAlignment="Top"
+                 Width="200"
+                  FontSize="13"
+                     FontWeight="Medium"
+                         
+                         Foreground="Black"
+                         CaretBrush="Black"
+                         BorderBrush="Black"
+                         BorderThickness="0,0,0,1"
+                         Height="28"
+                     Padding="30,0,0,0">
+            <TextBox.Background>
+                <ImageBrush ImageSource="C:\Users\zury\Desktop\MARKET-PLACE\Imagenes\Login\usuario.png"
+                                Stretch="Uniform"
+                                AlignmentX="Left">
+                </ImageBrush>
+            </TextBox.Background>
+
+        </TextBox>
+        <!--#endregion-->
+
+
+        <!--#region PASSWORD-->
+
+        <TextBlock HorizontalAlignment="Left"
+                       Margin="596,303,0,0"
+                       TextWrapping="Wrap"
+                       Text="CONTRASEÑA"
+                       VerticalAlignment="Top" 
+                       FontFamily="Arial Rounded MT Bold"/>
+
+
+
+        <PasswordBox x:Name="TxtPassword" 
+                 HorizontalAlignment="Left"
+                 Margin="594,319,0,0"
+                 VerticalAlignment="Top" 
+                 Width="200"
+                     FontSize="13"
+                     FontWeight="Medium"
+                         
+                         Foreground="Black"
+                         CaretBrush="Black"
+                         BorderBrush="Black"
+                         BorderThickness="0,0,0,1"
+                         Height="28"
+                     Padding="30,0,0,0">
+            <PasswordBox.Background>
+                <ImageBrush ImageSource="C:\Users\zury\Desktop\MARKET-PLACE\Imagenes\Login\bloquear.png"
+                                Stretch="Uniform"
+                                AlignmentX="Left">
+                </ImageBrush>
+            </PasswordBox.Background>
+        </PasswordBox>
+        <!--#endregion-->
+
+        <!--#region BTN AGREGAR USUARIOS-->
+        <Button x:Name="BtnAdd"
+                Content="crear cueenta"
+                HorizontalAlignment="Left"
+                Height="31"
+                Margin="595,381,0,0" 
+                VerticalAlignment="Top"
+                Width="200"
+                BorderBrush="Transparent"
+                Background="DarkOrange"
+                Click="BtnAdd_Click"/>
+        <!--#endregion-->
+
     </Grid>
 </Window>

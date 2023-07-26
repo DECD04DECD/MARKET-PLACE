@@ -33,18 +33,30 @@ namespace MARKET_PLACE.Vistas
         {
             try
             {
-                Usuario usuario = new Usuario();
-                usuario.Nombre = TxtName.Text;
-                usuario.UserName = TxtUserName.Text;
-                usuario.Password = TxtPassword.Text;
-                //usuario.FkRol = int.Parse(SelectRol.SelectedValue.ToString());
-                Servicios.AddUsuario(usuario);
 
-                TxtName.Clear();
-                TxtUserName.Clear();
-                TxtPassword.Clear();
 
-                MessageBox.Show("Se agrego correctamente");
+                using (var _Context = new ApplicationDbContext())
+                {
+                    Usuario usuario = new Usuario();
+
+                    usuario.Nombre = TxtName.Text;
+                    usuario.UserName = TxtUserName.Text;
+                    usuario.Password = TxtPassword.Password;
+
+                    //usuario.FkRol = int.Parse(SelectRol.SelectedValue.ToString());
+                    Servicios.AddUsuario(usuario);
+
+                    TxtName.Clear();
+                    TxtUserName.Clear();
+                    TxtPassword.Clear();
+
+                    MessageBox.Show("Se agrego correctamente");
+
+                    Close();
+
+                    MainWindow mw = new MainWindow();
+                    mw.Show();
+                }
             }
             catch (Exception ex)
             {

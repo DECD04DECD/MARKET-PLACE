@@ -165,6 +165,8 @@
             <Image Source="/cerrar.png"
                                Cursor="Hand"/>
         </Button>
+        <!--#endregion-->
+        
     </Grid>
 
 </Window>

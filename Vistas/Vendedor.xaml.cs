@@ -40,7 +40,7 @@ namespace MARKET_PLACE.Vistas
                     producto.Precio = double.Parse(txtPrecio.Text);
                     producto.Cantidad = int.Parse(txtCantidad.Text);
                     
-                    MessageBoxResult result = MessageBox.Show("¿Está seguro de que desea continuar?", "Confirmación", MessageBoxButton.YesNo);
+                    MessageBoxResult result = MessageBox.Show("¿Está seguro de que desea Agregarlo?", "Confirmación", MessageBoxButton.YesNo);
                     if (result == MessageBoxResult.Yes)
                     {
                         Services.AddProducto(producto);

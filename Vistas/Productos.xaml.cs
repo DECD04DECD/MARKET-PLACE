@@ -78,7 +78,7 @@ namespace MARKET_PLACE.Vistas
 
         private void MenuP(object sender, RoutedEventArgs e)
         {
-            DataContext = new Productos();
+            
         }
     }
 }

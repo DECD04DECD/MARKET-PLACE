@@ -58,5 +58,27 @@ namespace MARKET_PLACE.Vistas
         {
             DataContext = new Vendedor();
         }
+
+        private void BtnMicuenta_Click(object sender, RoutedEventArgs e)
+        {
+            
+
+            MainWindow m = new MainWindow();
+            m.Show();
+
+            Close();
+        }
+
+        private void BtnAyuda_Click(object sender, RoutedEventArgs e)
+        {
+            DataContext = new AyudaC();
+        }
+
+      
+
+        private void MenuP(object sender, RoutedEventArgs e)
+        {
+            
+        }
     }
 }

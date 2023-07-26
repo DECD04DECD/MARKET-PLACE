@@ -64,6 +64,10 @@ namespace MARKET_PLACE.Vistas
                 throw new Exception("Error: " + ex.Message);
             }
         }
-        
+
+        private void BtCerrar_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
     }
 }

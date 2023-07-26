@@ -75,6 +75,9 @@ namespace MARKET_PLACE.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
+                    b.Property<int>("Cantidad")
+                        .HasColumnType("int");
+
                     b.Property<string>("Nombre")
                         .IsRequired()
                         .HasColumnType("text");
@@ -90,24 +93,28 @@ namespace MARKET_PLACE.Migrations
                         new
                         {
                             PkProducto = 3,
+                            Cantidad = 20,
                             Nombre = "Maquillaje",
                             Precio = 1850.0
                         },
                         new
                         {
                             PkProducto = 2,
+                            Cantidad = 12,
                             Nombre = "Playera",
                             Precio = 649.99000000000001
                         },
                         new
                         {
                             PkProducto = 1,
+                            Cantidad = 5,
                             Nombre = "Telefono",
                             Precio = 8999.9899999999998
                         },
                         new
                         {
                             PkProducto = 4,
+                            Cantidad = 15,
                             Nombre = "Balon",
                             Precio = 500.0
                         });

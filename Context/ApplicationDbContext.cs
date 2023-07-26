@@ -117,10 +117,10 @@ namespace MARKET_PLACE.Context
             modelBuilder.Entity<Producto>().HasData(
                 new Producto
                 {
-
                     PkProducto = 3,
                     Nombre = "Maquillaje",
                     Precio = 1850.00,
+                    Cantidad = 20
 
                 },
                 new Producto
@@ -128,6 +128,7 @@ namespace MARKET_PLACE.Context
                     PkProducto = 2,
                     Nombre = "Playera",
                     Precio = 649.99,
+                    Cantidad = 12
 
                 },
                 new Producto
@@ -135,13 +136,14 @@ namespace MARKET_PLACE.Context
                     PkProducto = 1,
                     Nombre = "Telefono",
                     Precio = 8999.99,
-
+                    Cantidad = 5
                 },
                 new Producto
                 {
                     PkProducto = 4,
                     Nombre = "Balon",
-                    Precio = 500.00
+                    Precio = 500.00,
+                    Cantidad = 15
                 }
             );
 

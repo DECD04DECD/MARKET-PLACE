@@ -122,7 +122,7 @@
                      Padding="30,0,0,0">
                 
                 <TextBox.Background>
-                    <ImageBrush ImageSource="C:\Users\zury\Desktop\MARKET-PLACE\Imagenes\Login\usuario.png"
+                    <ImageBrush ImageSource="C:\Users\52998\Desktop\MARKET-PLACE\Imagenes\Login\usuario.png"
                                 Stretch="Uniform"
                                 AlignmentX="Left">
                         
@@ -159,7 +159,7 @@
                      Padding="30,0,0,0">
 
                 <PasswordBox.Background>
-                    <ImageBrush ImageSource="C:\Users\zury\Desktop\MARKET-PLACE\Imagenes\Login\bloquear.png"
+                    <ImageBrush ImageSource="C:\Users\52998\Desktop\MARKET-PLACE\Imagenes\Login\bloquear.png"
                                 Stretch="Uniform"
                                 AlignmentX="Left">
                     </ImageBrush>

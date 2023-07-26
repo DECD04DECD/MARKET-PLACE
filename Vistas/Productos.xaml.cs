@@ -46,7 +46,7 @@ namespace MARKET_PLACE.Vistas
 
         private void PreviewMouseLefthButtonDownBG(object sender, MouseButtonEventArgs e)
         {
-            BtnShowHide.IsChecked=true;
+            BtnShowHide.IsChecked=false;
         }
 
         private void Carrito(object sender, RoutedEventArgs e)

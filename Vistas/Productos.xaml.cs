@@ -58,5 +58,10 @@ namespace MARKET_PLACE.Vistas
         {
             DataContext = new Vendedor();
         }
+
+        private void BtnAyuda_Click(object sender, RoutedEventArgs e)
+        {
+            DataContext = new AyudaCliente();
+        }
     }
 }

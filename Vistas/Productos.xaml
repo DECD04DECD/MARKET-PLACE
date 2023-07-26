@@ -248,7 +248,7 @@
         </DataTemplate>
         <!--#endregion-->
 
-        <!--#region VENTANA CARRITO-->
+        <!--#region VENTANA VENDEDOR-->
         <DataTemplate x:Name="Vendedor" DataType="{x:Type viewmodels:Vendedor}">
         </DataTemplate>
         <!--#endregion-->
@@ -312,63 +312,7 @@
                     </TextBlock>
                     <!--#endregion-->
 
-                    <!--#region BTN CUENTA-->
-                    <Button x:Name="BtnCuenta"
-                            Grid.Column="1"
-                            Background="Transparent"
-                            BorderBrush="Transparent"
-                            Foreground="Black"
-                            FontSize="15"
-                            VerticalAlignment="Center"
-                                HorizontalAlignment="Left"
-                            Cursor="Hand">
-                        <Grid>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="15"/>
-                                <ColumnDefinition/>
-                            </Grid.ColumnDefinitions>
-                            <Image Source="/Vistas/configuracion.png"
-                                   Grid.Column="0"
-                                   VerticalAlignment="Center"/>
-                            <TextBlock Text="Mi cuenta"
-                                       Grid.Column="1"
-                                       HorizontalAlignment="Center"
-                                       VerticalAlignment="Center"
-                                       Margin="5,0,0,0"/>
-                        </Grid>
-
-                    </Button>
-
-                    <!--#endregion-->
-
-                    <!--#region info-->
-                    <Button x:Name="BtnInfo"
-                            Grid.Column="1"
-                            Background="Transparent"
-                            BorderBrush="Transparent"
-                            Foreground="Black"
-                            FontSize="15"
-                            VerticalAlignment="Center"
-                                HorizontalAlignment="Right"
-                            Cursor="Hand">
-                        <Grid>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="15"/>
-                                <ColumnDefinition/>
-                            </Grid.ColumnDefinitions>
-                            <Image Source="/Vistas/info.png"
-                                   Grid.Column="0"
-                                   VerticalAlignment="Center"/>
-                            <TextBlock Text="Ayuda"
-                                       Grid.Column="1"
-                                       HorizontalAlignment="Center"
-                                       VerticalAlignment="Center"
-                                       Margin="5,0,0,0"/>
-                        </Grid>
-
-                    </Button>
-                    <!--#endregion-->
-
+                  
                     <!--#region MINIMIZAR-->
                     <Button x:Name="BtnMinimizar"
                             Grid.Column="2"
@@ -583,6 +527,82 @@
                                                VerticalAlignment="Center"
                                                HorizontalAlignment="Center"/>
 
+                            </Grid>
+
+
+                        </Button>
+
+                    </ListViewItem>
+
+                    <!--#endregion-->
+                    
+                    <!--#region Mi cuenta-->
+                    <ListViewItem Height="70">
+
+                        <Button  Name="BtnMicuenta"                              
+                                 Height="50"
+                                  Width="200"
+                                  HorizontalAlignment="Left"
+                                  Cursor="Hand"
+                                  Background="Transparent"
+                                BorderBrush="Transparent">
+
+
+                            <Grid Width="200">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="60"/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+
+                                <Image Width="50"
+                                           Grid.Column="0"
+                                           HorizontalAlignment="Left"
+                                           Source="C:\Users\zury\Desktop\MARKET-PLACE\Imagenes\Principal\cuenta.png" Margin="3,6,0,0" Height="46" VerticalAlignment="Top"/>
+                                <TextBlock Grid.Column="1"
+                                               Text="Mi cuenta"
+                                               FontWeight="SemiBold"
+                                               FontSize="15"
+                                               VerticalAlignment="Center"
+                                               HorizontalAlignment="Center"/>
+                            </Grid>
+
+
+                        </Button>
+
+                    </ListViewItem>
+
+                    <!--#endregion-->
+                    
+                    <!--#region Ayuda-->
+
+
+                    <ListViewItem Height="70">
+
+                        <Button  Name="BtnAyuda"                              
+                                 Height="50"
+                                  Width="200"
+                                  HorizontalAlignment="Left"
+                                  Cursor="Hand"
+                                  Background="Transparent"
+                                BorderBrush="Transparent">
+
+
+                            <Grid Width="200">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="60"/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+
+                                <Image Width="50"
+                                           Grid.Column="0"
+                                           HorizontalAlignment="Left"
+                                           Source="/Vistas/info.png" Margin="3,6,0,0" Height="46" VerticalAlignment="Top"/>
+                                <TextBlock Grid.Column="1"
+                                               Text="Ayuda"
+                                               FontWeight="SemiBold"
+                                               FontSize="15"
+                                               VerticalAlignment="Center"
+                                               HorizontalAlignment="Center"/>
                             </Grid>
 
 

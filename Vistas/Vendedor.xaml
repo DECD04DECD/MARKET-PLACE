@@ -12,19 +12,97 @@
     <!--#region CONTENIDO-->
     <Border CornerRadius="10" Background="White">
         <Grid Name="GridCarrito" Background="White">
-            <Label Content="Producto" HorizontalAlignment="Center" Height="34" Margin="0,103,0,0" VerticalAlignment="Top" Width="175"/>
-            <TextBox x:Name="txtProducto" HorizontalAlignment="Left" Height="19" Margin="375,137,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="102"/>
-            <Label Content="Precio" HorizontalAlignment="Left" Height="27" Margin="375,161,0,0" VerticalAlignment="Top" Width="102"/>
-            <TextBox x:Name="txtPrecio" HorizontalAlignment="Left" Height="25" Margin="375,188,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="102"/>
-            <Label Content="Cantidad" HorizontalAlignment="Left" Height="26" Margin="375,218,0,0" VerticalAlignment="Top" Width="102"/>
-            <TextBox x:Name="txtCantidad" HorizontalAlignment="Left" Height="24" Margin="375,249,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="102"/>
-            <Button x:Name="BtnAddProducto" Content="Guardar" HorizontalAlignment="Left" Height="45" Margin="651,414,0,0" VerticalAlignment="Top" Width="132" Background="Orange" Click="BtnAddProducto_Click"/>
-            <Label Content="Genero" HorizontalAlignment="Left" Height="26" Margin="375,282,0,0" VerticalAlignment="Top" Width="108"/>
-            <ComboBox x:Name="SelectRolProducto" HorizontalAlignment="Left" Margin="375,313,0,0" VerticalAlignment="Top" Width="120"/>
-            <TextBox x:Name="txtPkProducto" HorizontalAlignment="Left" Height="18" Margin="600,102,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="102" IsEnabled="False"/>
+
+
+            <TextBlock HorizontalAlignment="Left"
+                       Margin="585,194,0,0"
+                       TextWrapping="Wrap"
+                       Text="PRODUCTO"
+                       VerticalAlignment="Top" 
+                       FontFamily="Arial
+                       Rounded MT Bold"/>
+
+            <TextBox x:Name="txtProducto"
+                     HorizontalAlignment="Left"
+                     Height="29" 
+                     Margin="588,206,0,0"
+                     TextWrapping="Wrap" 
+                     VerticalAlignment="Top"
+                     Width="200"
+                      FontSize="13"
+                     FontWeight="Medium"
+                         
+                         Foreground="Black"
+                         CaretBrush="Black"
+                         BorderBrush="Black"
+                         BorderThickness="0,0,0,1"
+                     Padding="30,0,0,0"/>
+
+
+
+            <TextBlock HorizontalAlignment="Left"
+                       Margin="584,260,0,0"
+                       TextWrapping="Wrap"
+                       Text="PRECIO"
+                       VerticalAlignment="Top" 
+                       FontFamily="Arial
+                       Rounded MT Bold"/>
+
+            <TextBox x:Name="txtPrecio"
+                     HorizontalAlignment="Left"
+                     Height="25" 
+                     Margin="584,273,0,0"
+                     TextWrapping="Wrap"
+                     VerticalAlignment="Top"
+                     Width="70"
+                      FontSize="13"
+                     FontWeight="Medium"
+                         
+                         Foreground="Black"
+                         CaretBrush="Black"
+                         BorderBrush="Black"
+                         BorderThickness="0,0,0,1"
+                     Padding="30,0,0,0"/>
+
+            <TextBlock HorizontalAlignment="Left"
+                       Margin="585,319,0,0"
+                       TextWrapping="Wrap"
+                       Text="CANTIDAD"
+                       VerticalAlignment="Top" 
+                       FontFamily="Arial
+                       Rounded MT Bold"/>
+
+            <TextBox x:Name="txtCantidad"
+                     HorizontalAlignment="Left"
+                     Height="24"
+                     Margin="583,333,0,0"
+                     TextWrapping="Wrap"
+                     VerticalAlignment="Top"
+                     Width="70"
+                       FontSize="13"
+                     FontWeight="Medium"
+                         
+                         Foreground="Black"
+                         CaretBrush="Black"
+                         BorderBrush="Black"
+                         BorderThickness="0,0,0,1"
+                     Padding="30,0,0,0"/>
+
+
+            <Button x:Name="BtnAddProducto" Content="Guardar" HorizontalAlignment="Left" Height="45" Margin="643,456,0,0" VerticalAlignment="Top" Width="132" Background="Orange" Click="BtnAddProducto_Click"/>
+
+
+            <Label Content="Genero" HorizontalAlignment="Left" Height="26" Margin="577,380,0,0" VerticalAlignment="Top" Width="108"/>
+            <ComboBox x:Name="SelectRolProducto" HorizontalAlignment="Left" Margin="583,410,0,0" VerticalAlignment="Top" Width="120"/>
+          
             <!--#region TITULO-->
-            <TextBlock Grid.Row="0" Text="VENDER PRODUCTO" Foreground="Black" FontSize="40" HorizontalAlignment="Center" FontFamily="Arial Rounded MT Bold" Margin="0,17,0,502"/>
             <!--#endregion-->
+
+            <Image Source="C:\Users\zury\Desktop\MARKET-PLACE\Imagenes\CreaCuenta\nuevop.jpg" Margin="527,33,66,405"/>
+
+            <Image Source="C:\Users\zury\Desktop\MARKET-PLACE\Imagenes\CreaCuenta\venta.png" Margin="74,123,373,100"/>
+
+
 
 
         </Grid>

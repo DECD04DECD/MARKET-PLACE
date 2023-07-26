@@ -27,7 +27,7 @@
                        FontSize="24"
                        FontFamily="Arial Rounded MT Bold"/>
 
-        <Image  Source="C:\Users\52998\Desktop\MARKET-PLACE\Imagenes\CreaCuenta\CrearCuenta.png"
+        <Image  Source="C:\Users\zury\Desktop\MARKET-PLACE\Imagenes\CreaCuenta\CrearCuenta.png"
                  Cursor="Hand"
                    Margin="-2,147,453,124"
                    RenderTransformOrigin="0.5,0.5"
@@ -60,7 +60,7 @@
                          Height="28"
                      Padding="30,0,0,0">
             <TextBox.Background>
-                <ImageBrush ImageSource="C:\Users\52998\Desktop\MARKET-PLACE\Imagenes\Login\usuario.png"
+                <ImageBrush ImageSource="C:\Users\zury\Desktop\MARKET-PLACE\Imagenes\Login\usuario.png"
                                 Stretch="Uniform"
                                 AlignmentX="Left">
                 </ImageBrush>
@@ -94,7 +94,7 @@
                          Height="28"
                      Padding="30,0,0,0">
             <TextBox.Background>
-                <ImageBrush ImageSource="C:\Users\52998\Desktop\MARKET-PLACE\Imagenes\Login\usuario.png"
+                <ImageBrush ImageSource="C:\Users\zury\Desktop\MARKET-PLACE\Imagenes\Login\usuario.png"
                                 Stretch="Uniform"
                                 AlignmentX="Left">
                 </ImageBrush>
@@ -130,7 +130,7 @@
                          Height="28"
                      Padding="30,0,0,0">
             <PasswordBox.Background>
-                <ImageBrush ImageSource="C:\Users\52998\Desktop\MARKET-PLACE\Imagenes\Login\bloquear.png"
+                <ImageBrush ImageSource="C:\Users\zury\Desktop\MARKET-PLACE\Imagenes\Login\bloquear.png"
                                 Stretch="Uniform"
                                 AlignmentX="Left">
                 </ImageBrush>

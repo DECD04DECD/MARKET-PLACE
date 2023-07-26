@@ -114,6 +114,11 @@ namespace MARKET_PLACE.Vistas
         {
             Close();
         }
+
+        private void BtCerrar_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
     }
 }
 

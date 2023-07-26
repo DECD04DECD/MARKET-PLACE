@@ -74,7 +74,7 @@ namespace MARKET_PLACE.Vistas
             if (usuarioSeleccionado != null)
             {
                 services.deleteUser(usuarioSeleccionado.PkUsuario);
-                MessageBox.Show("Se eliminó el usuario correctamente");
+                //MessageBox.Show("Se eliminó el usuario correctamente");
                 GetUserTable();
             }
             else
@@ -111,6 +111,13 @@ namespace MARKET_PLACE.Vistas
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow main = new MainWindow();
+            main.Show();
+            Close();
+        }
+
+        private void BtCerrar_Click(object sender, RoutedEventArgs e)
         {
             Close();
         }

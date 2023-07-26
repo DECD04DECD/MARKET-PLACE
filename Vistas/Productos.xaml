@@ -253,6 +253,11 @@
         </DataTemplate>
         <!--#endregion-->
 
+        <!--#region mi Ayuda-->
+        <DataTemplate x:Name="AyudaC" DataType="{x:Type viewmodels:AyudaC}">
+        </DataTemplate>
+        <!--#endregion-->
+
 
     </Window.Resources>
 
@@ -372,7 +377,7 @@
                                           Width="30"
                                           Height="30"
                                       Cursor="Hand"
-                                          BorderBrush="Transparent" Checked="TBshow" Unchecked="TBhide">
+                                          BorderBrush="Transparent" Checked="TBshow" Unchecked="TBhide" HorizontalAlignment="Left">
                             <ToggleButton.Background>
                                 <ImageBrush ImageSource="\Vistas\Menu.png"/>
                             </ToggleButton.Background>
@@ -420,13 +425,15 @@
 
                         <!--#region INICIO-->
                         <ListViewItem Height="70">
-                            <Button Style="{DynamicResource ListViewStely}" Name="BtnInicio"
+                            <Button Style="{DynamicResource ListViewStely}" 
+                                    Name="BtnInicio"
+                                   
                                   Height="50"
                                   Width="200"
                                   HorizontalAlignment="Left"
                                   Cursor="Hand"
                                   Background="Transparent"
-                                BorderBrush="Transparent" >
+                                BorderBrush="Transparent" Click="MenuP" >
 
 
                                 <Grid Width="200">
@@ -536,42 +543,6 @@
 
                     <!--#endregion-->
                     
-                    <!--#region Mi cuenta-->
-                    <ListViewItem Height="70">
-
-                        <Button  Name="BtnMicuenta"                              
-                                 Height="50"
-                                  Width="200"
-                                  HorizontalAlignment="Left"
-                                  Cursor="Hand"
-                                  Background="Transparent"
-                                BorderBrush="Transparent">
-
-
-                            <Grid Width="200">
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="60"/>
-                                    <ColumnDefinition/>
-                                </Grid.ColumnDefinitions>
-
-                                <Image Width="50"
-                                           Grid.Column="0"
-                                           HorizontalAlignment="Left"
-                                           Source="C:\Users\zury\Desktop\MARKET-PLACE\Imagenes\Principal\cuenta.png" Margin="3,6,0,0" Height="46" VerticalAlignment="Top"/>
-                                <TextBlock Grid.Column="1"
-                                               Text="Mi cuenta"
-                                               FontWeight="SemiBold"
-                                               FontSize="15"
-                                               VerticalAlignment="Center"
-                                               HorizontalAlignment="Center"/>
-                            </Grid>
-
-
-                        </Button>
-
-                    </ListViewItem>
-
-                    <!--#endregion-->
                     
                     <!--#region Ayuda-->
 
@@ -612,7 +583,44 @@
 
                     <!--#endregion-->
 
+                    <!--#region micuenta-->
+                    <ListViewItem Height="70">
+
+                        <Button  Name="BtnMicuenta"                              
+                                 Height="50"
+                                  Width="200"
+                                  HorizontalAlignment="Left"
+                                  Cursor="Hand"
+                                  Background="Transparent"
+                                BorderBrush="Transparent" Click="BtnMicuenta_Click">
+
+
+                            <Grid Width="200">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="60"/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+
+                                <Image Width="50"
+                                           Grid.Column="0"
+                                           HorizontalAlignment="Left"
+                                           Source="C:\Users\zury\Desktop\MARKET-PLACE\Imagenes\Principal\cuenta.png" Margin="3,6,0,0" Height="46" VerticalAlignment="Top"/>
+                                <TextBlock Grid.Column="1"
+                                               Text="Cerrar sesiòn"
+                                               FontWeight="SemiBold"
+                                               FontSize="15"
+                                               VerticalAlignment="Center"
+                                               HorizontalAlignment="Center"/>
+                            </Grid>
+
+
+                        </Button>
+
+                    </ListViewItem>
+                    <!--#endregion-->
+
                 </StackPanel>
+                
             </Grid>
         </Grid>
     </Border>
